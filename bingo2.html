@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style2.css" />
+    <title>Bingooo</title>
+  </head>
+  <body>
+    <h1>BINGO</h1>
+    <div id="board"></div>
+    <br />
+    <form name="rn">
+      <input class="textId" type="text" id="tb" name="tb" />
+      <input
+        id="buttonId"
+        type="button"
+        value="Random Number!"
+        onclick="Random();"
+      />
+    </form>
+    <script>
+      window.onload = function () {
+        generateBoard();
+      };
+      function generateBoard() {
+        const bingoBoard = document.getElementById("board");
+
+        for (let i = 0; i < 76; i++) {
+          const newNumberBox = document.createElement("div");
+          newNumberBox.classList.add("numberContainer");
+          const h3 = document.createElement("h3");
+          h3.id = i + 1;
+          h3.innerHTML = i + 1;
+
+          newNumberBox.appendChild(h3);
+          bingoBoard.appendChild(newNumberBox);
+        }
+      }
+
+      function Random() {
+        var rnd = Math.floor(Math.random() * 76);
+        document.getElementById("tb").value = rnd;
+      }
+
+      const highlight = function () {
+        const colorIt = document.getElementsByClassName("textId");
+        colorIt.innerHTML = random();
+        colorIt.classList.add("numberHighlight");
+      };
+    </script>
+  </body>
+</html>

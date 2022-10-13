@@ -1,0 +1,32 @@
+#board {
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  margin: auto;
+}
+
+.numberContainer {
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+}
+
+body {
+  margin: 0;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-size: 10vh;
+}
+
+h3 {
+  margin: 5px;
+}
+
+.numberHighlight {
+  background-color: lightseagreen;
+}
